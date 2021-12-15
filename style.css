@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\ RESET \\\\\\\\\\\\\\\\\\\\ */
+
+body{
+    font-family: 'Karla', sans-serif;
+}
+
+.nav{
+    z-index: 99;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    background-color: #fafafa;
+    padding: 25px 0;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.navbar{
+    padding-top: 6px;
+    float: right;
+    display: flex;
+    font-size: 16px;
+}
+
+a{
+    transition: 0.4s;
+    color: hsl(273, 4%, 51%);
+    margin: 0 25px 0 0;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    
+}
+
+a:hover{
+    color:  hsl(270, 9%, 17%);
+}
+
+.mt-10{
+    margin-top: -13px ;
+}
+
+.button{
+    /* margin-left: 15px; */
+    transition: 0.4s;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 700;
+    width: 100px;
+    border: 2px solid hsl(270, 9%, 17%);
+}
+
+.navbar>.button:hover{
+    padding: 11px 21px;
+    border: none;
+    color: #fafafa;
+    background-color: hsl(270, 9%, 17%);
+}
+
+.background{
+    position: absolute ;
+    z-index: -9;
+    width: 100%;
+    height: 750px;
+    background-color:hsl(256, 26%, 20%) ;
+}
+
+.kanan{
+    position: absolute ;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+
+.kiri{
+    position: absolute ;
+    z-index: 1;
+    left: 0;
+    /* bottom: 0; */
+    margin-top: 580px;
+}
+
+.jumbo-trone{
+    padding-top: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    grid-template-areas: "typo gambar";
+    /* grid-gap: 20px; */
+}
+
+.typo{
+    width: 95%;
+    margin: 0 auto;
+    grid-area: typo;
+    color: hsl(0, 0%, 98%);
+}
+
+.line{
+    width: 148px;
+    height: 2px;
+    background-color: hsl(0, 0%, 98%);
+    border: none;
+}
+
+.hight{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 70px;
+    font-family: 'DM Serif Display', sans-serif;
+}
+
+.detail{
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: px;
+}
+
+.gambar{
+    grid-area: gambar;
+}
+
+.gambar>img{
+    float: right;
+    /* width: 12.5%; */
+    height: auto;
+}
+
+.typo>.button{
+        /* margin-left: 15px; */
+        margin-top: 40px;
+        transition: 0.4s;
+        padding: 10px 20px;
+        text-align: center;
+        font-weight: 700;
+        width: 100px;
+        border: 2px solid hsl(0, 0%, 98%) ;
+}
+
+.typo>.button:hover{
+    padding: 11px 21px;
+    border: none;
+    color: hsl(270, 9%, 17%);
+    background-color: hsl(0, 0%, 98%);
+}
+
+hr{
+    background-color: rgba(121, 121, 121, 0.24);
+    border: none;
+    height: 1px;
+    margin-left: 0;
+    text-align: left;
+    width: 144px;
+}
+
+.list{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.fiture{
+    display: flex;
+}
+
+.title{
+    margin: 30px 0 20px 0;
+    font-size: 30px;
+    font-family: 'DM Serif Display', sans-serif;
+}
+
+.isi{
+    width: 95%;
+    font-size: 17px;
+    line-height: 1.6;
+    letter-spacing: px;
+    color: hsl(273, 4%, 51%);
+}
+
+.bener{height: auto;
+    display: flex;
+justify-content: space-evenly;
+    padding: 70px 0;
+    margin-bottom: 150px;
+    width: 100%;
+    background-color: hsl(256, 26%, 20%);
+    background-image: url(images/bg-pattern-how-we-work-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+.isi-bener{  
+    width: 50%;
+    color: hsl(0, 0%, 98%);
+    font-size: 55px;
+    font-family: 'DM Serif Display', sans-serif;
+}
+
+.pencet>.button{
+    margin-top: 30px;
+    color: hsl(0, 0%, 98%);
+    transition: 0.4s;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: 700;
+    width: 150px;
+    border: 2px solid hsl(0, 0%, 98%) ;
+}
+
+.pencet>.button:hover{
+padding: 11px 21px;
+border: none;
+color: hsl(270, 9%, 17%);
+background-color: hsl(0, 0%, 98%);
+}
+
+.background-footer{
+    position: absolute ;
+    z-index: -9;
+    width: 100%;
+    height: 400px;
+    background-color:hsl(0, 0%, 98%);
+    background-image: url(images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
+
+.head-line{
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer>.container>.head-line>.icon>img{
+    padding:0 5px;
+    filter: invert(14%) sepia(11%) saturate(226%) hue-rotate(314deg) brightness(105%) contrast(85%);
+}
+
+.footer>.container>.head-line>.icon>img:hover{
+   
+    filter: invert(0%) sepia(4%) saturate(17%) hue-rotate(130deg) brightness(92%) contrast(104%);
+}
+
+.our{
+    margin-top: 40px;
+}
+
+.judul{
+    color: hsl(273, 4%, 51%);
+    margin: 0 25px 0 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+}

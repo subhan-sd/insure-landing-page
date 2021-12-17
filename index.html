@@ -12,13 +12,20 @@
 
   <!-- Navbar Secction -->
 
-  <div class="nav">
-    <div class="container">
+  <div class="  nav-mob" id="navmob">
+    <a href="#">HOW WE WORK</a>
+    <a href="#">BLOG</a>
+    <a href="#">ACCOUNT</a>
+    <div class="button mt-10">
+      VIEW PLANS
+    </div>
+  <div class="nav"></div>
+    </div>
       <div class="navigasi">
       <div class="brand-nav">
         <img src="images/logo.svg" alt="">
       </div>
-      <div class="navbar" id="navbar">
+      <div class="navbar  " id="navbar">
         <a href="#">HOW WE WORK</a>
         <a href="#">BLOG</a>
         <a href="#">ACCOUNT</a>
@@ -26,7 +33,6 @@
           VIEW PLANS
         </div>
       </div>
-    </div>
     </div>
   </div>
 
@@ -176,7 +182,9 @@
 
     document.getElementById('kiri').innerHTML ="<img src='images/bg-pattern-intro-left-mobile.svg'>";
    
-    document.getElementById('navbar').innerHTML ="<img src='images/icon-hamburger.svg'>";
+    document.getElementById('navbar').style.display="hide";
+
+    document.getElementById('nav-mob').style.display="block";
    } 
   //else {
   //   document.body.style.backgroundColor = "pink";

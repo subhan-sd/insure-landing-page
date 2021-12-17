@@ -50,6 +50,11 @@ body{
     font-family: 'Karla', sans-serif;
 }
 
+.navigasi{
+    display: flex;
+    justify-content: space-between;
+}
+
 .nav{
     z-index: 99;
     top: 0;
@@ -66,9 +71,12 @@ body{
 
 .navbar{
     padding-top: 6px;
-    float: right;
     display: flex;
     font-size: 16px;
+}
+
+.brand-nav{
+    padding-top: 10px;
 }
 
 a{
@@ -335,10 +343,10 @@ background-color: hsl(0, 0%, 98%);
 
 @media only screen and (max-width: 700px){
     .jumbo-trone{
-        padding-top: 200px;
+        padding-top: 100px;
         display: grid;
         grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 0.4fr 1fr;
         grid-template-areas: 
         "gambar"
         "typo"
@@ -354,12 +362,8 @@ background-color: hsl(0, 0%, 98%);
         text-align: center;
     }
 
-    .jumbo-trone{
-        padding-top: 100px;
-    }
-
     .background{
-    height: 1300px; 
+    height: 1000px; 
     }
 
     .detail{
@@ -388,9 +392,9 @@ background-color: hsl(0, 0%, 98%);
     flex-direction: column;
     justify-content: space-evenly;
     padding: 70px 0;
-    margin-bottom: 150px;
     width: 80%;
     margin: auto;
+    margin-bottom: 150px;
     background-color: hsl(256, 26%, 20%);
     background-image: url(images/bg-pattern-how-we-work-mobile.svg);
     background-repeat: no-repeat;
@@ -410,13 +414,73 @@ background-color: hsl(0, 0%, 98%);
 
 
     .gambar{
-        margin: 0;
-        background-color: black;
+        margin:0;
+        /* background-color: black; */
     }
     .gambar>img{
-        /* float: right; */
-        width: auto;
+        margin: auto;
+        float: none;
+        width: 100%;
         /* width: 12.5%; */
-        /* height: auto; */
+        height: auto;
+    }
+
+    .list{
+        margin-top: 200px;
+        margin-bottom: 200px;
+    }
+
+    .kiri{
+    margin-top: 550px;
+    }
+
+    .kanan{
+        z-index: 1;
+        margin-top: 850px;
+        right: 0;
+    }
+
+    .background-footer{
+        height: 900px;
+    background-image: url(images/bg-pattern-footer-mobile.svg);
+    }
+
+    .head-line{
+        height: 100px;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .brand{
+        margin: auto;
+    }
+
+    .icon{
+        margin: auto;
+    }
+
+    .isi-f{
+        flex-direction: column;
+    }
+
+    .our{
+        padding-left: 25px;
+        /* margin: auto; */
+        margin-top:20px;
+        margin-bottom:20px;
+        /* justify-content: flex-start; */
+    }
+
+    .judul{
+        text-align: center;
+    }
+
+    .isi-f>.our>a{
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .navigasi{
+    margin: 0 20px;
     }
 }

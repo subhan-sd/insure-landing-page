@@ -14,8 +14,11 @@
 
   <div class="nav">
     <div class="container">
-      <img src="images/logo.svg" alt="">
-      <div class="navbar">
+      <div class="navigasi">
+      <div class="brand-nav">
+        <img src="images/logo.svg" alt="">
+      </div>
+      <div class="navbar" id="navbar">
         <a href="#">HOW WE WORK</a>
         <a href="#">BLOG</a>
         <a href="#">ACCOUNT</a>
@@ -23,6 +26,7 @@
           VIEW PLANS
         </div>
       </div>
+    </div>
     </div>
   </div>
 
@@ -38,7 +42,6 @@
       <div class="jumbo-trone">
         <div class="typo">
           <div class="line">
-
             <hr>
           </div>
           <div class="hight">
@@ -172,6 +175,8 @@
     document.getElementById('kanan').innerHTML ="<img src='images/bg-pattern-intro-right-mobile.svg'>";
 
     document.getElementById('kiri').innerHTML ="<img src='images/bg-pattern-intro-left-mobile.svg'>";
+   
+    document.getElementById('navbar').innerHTML ="<img src='images/icon-hamburger.svg'>";
    } 
   //else {
   //   document.body.style.backgroundColor = "pink";
@@ -182,7 +187,7 @@ var x = window.matchMedia("(max-width: 700px)")
 myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes 
 
-var z = document.getElementById('gambar');
+var z = document.getElementById('navbar');
     console.log(z);
   </script>
 

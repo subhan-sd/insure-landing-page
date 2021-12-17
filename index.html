@@ -29,8 +29,8 @@
   <!-- Body Secction -->
 
   <div class="background"></div>
-  <div class="kanan"><img src="images/bg-pattern-intro-right-desktop.svg" alt=""></div>
-  <div class="kiri"><img src="images/bg-pattern-intro-left-desktop.svg" alt=""></div>
+  <div class="kanan" id="kanan"><img src="images/bg-pattern-intro-right-desktop.svg" alt=""></div>
+  <div class="kiri" id="kiri"><img src="images/bg-pattern-intro-left-desktop.svg" alt=""></div>
 
   <div class="container">
 
@@ -53,7 +53,7 @@
           </div>
           <div class="button ">VIEW PLANS</div>
         </div>
-        <div class="gambar">
+        <div class="gambar" id="gambar">
           <img src="images/image-intro-desktop.jpg" alt="">
         </div>
       </div>
@@ -66,7 +66,7 @@
         </div>
         <div class="fiture">
           
-          <div class="1">
+          <div class="promosi">
             <div class="icon"><img src="images/icon-snappy-process.svg" alt=""></div>
             <div class="title">Snappy Process</div>
             <div class="isi">Our application process can be completed in minutes, not hours. Don’t get 
@@ -74,7 +74,7 @@
             </div>
           </div>
 
-          <div class="2">
+          <div class="promosi">
             <div class="icon"><img src="images/icon-affordable-prices.svg" alt=""></div>
             <div class="title"> Affordable Prices</div>
             <div class="isi"> We don’t want you worrying about high monthly costs. Our prices may be low, 
@@ -82,7 +82,7 @@
             </div>
           </div>
 
-          <div class="3">
+          <div class="promosi">
             <div class="icon"><img src="images/icon-people-first.svg" alt=""></div>
             <div class="title">People First</div>
             <div class="isi">Our plans aren’t full of conditions and clauses to prevent payouts. We make 
@@ -131,10 +131,60 @@
           <a href="#">View plans</a>
           <a href="#">Reviews</a>
         </div>
+
+        <div class="our">
+          <div class="judul">Help me</div>
+          <a href="#">FAQ</a>
+          <a href="#">Terms of use</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Cookies</a>
+        </div>
+
+        <div class="our">
+          <div class="judul">Contact</div>
+          <a href="#">Sales</a>
+          <a href="#">Support</a>
+          <a href="#">Live chat</a>
+        </div>
+
+        <div class="our">
+          <div class="judul">Others</div>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Licenses</a>
+        </div>
+
+        <div class="our">
+        </div>
       </div>
 
     </div>
   </div>
+
+  <!-- js -->
+
+  <script>
+    function myFunction(x) {
+  if (x.matches) { // If media query matches
+    // document.body.style.backgroundColor = "yellow";
+    document.getElementById('gambar').innerHTML ="<img src='images/image-intro-desktop.jpg'>";
+
+    document.getElementById('kanan').innerHTML ="<img src='images/bg-pattern-intro-right-mobile.svg'>";
+
+    document.getElementById('kiri').innerHTML ="<img src='images/bg-pattern-intro-left-mobile.svg'>";
+   } 
+  //else {
+  //   document.body.style.backgroundColor = "pink";
+  // }
+}
+
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes 
+
+var z = document.getElementById('gambar');
+    console.log(z);
+  </script>
 
 </body>
 </html>

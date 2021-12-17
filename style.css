@@ -177,6 +177,7 @@ a:hover{
 
 .typo>.button{
         /* margin-left: 15px; */
+        margin: auto;
         margin-top: 40px;
         transition: 0.4s;
         padding: 10px 20px;
@@ -197,8 +198,8 @@ hr{
     background-color: rgba(121, 121, 121, 0.24);
     border: none;
     height: 1px;
-    margin-left: 0;
-    text-align: left;
+    /* margin-left: 0; */
+    text-align: center;
     width: 144px;
 }
 
@@ -273,6 +274,11 @@ background-color: hsl(0, 0%, 98%);
     background-position-x: left;
 }
 
+.footer{
+    height: 350px;
+    padding-bottom: 40px;
+}
+
 .head-line{
     padding-top: 60px;
     display: flex;
@@ -295,7 +301,122 @@ background-color: hsl(0, 0%, 98%);
 
 .judul{
     color: hsl(273, 4%, 51%);
-    margin: 0 25px 0 0;
-    font-weight: 400;
+    margin: 0 25px 20px 0;
+    font-weight: 700;
     letter-spacing: 1px;
+}
+
+.our{
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.isi-f{
+    justify-content: space-between;
+    height: 200px;
+    display: flex;
+}
+
+.isi-f>.our>a{
+    transition: 0.4s;
+    color: hsl(270, 9%, 17%);
+    margin: 0 25px 0 0;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    
+}
+
+.isi-f>.our>a:hover{
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 700px){
+    .jumbo-trone{
+        padding-top: 200px;
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "gambar"
+        "typo"
+        /* grid-gap: 20px; */
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .hight{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .jumbo-trone{
+        padding-top: 100px;
+    }
+
+    .background{
+    height: 1300px; 
+    }
+
+    .detail{
+        font-size: 13px;
+        text-align: center;
+    }
+
+    .line{
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .fiture{
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        margin:auto;
+        text-align: center;
+    }
+
+    .promosi{
+        padding: 15px 0 35px 0;
+    }
+
+    .bener{
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 70px 0;
+    margin-bottom: 150px;
+    width: 80%;
+    margin: auto;
+    background-color: hsl(256, 26%, 20%);
+    background-image: url(images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    }
+
+    .isi-bener{
+        width: 80%;
+        font-size:40px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .pencet{
+        margin:auto;
+    }
+
+
+    .gambar{
+        margin: 0;
+        background-color: black;
+    }
+    .gambar>img{
+        /* float: right; */
+        width: auto;
+        /* width: 12.5%; */
+        /* height: auto; */
+    }
 }

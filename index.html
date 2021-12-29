@@ -5,27 +5,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- Navbar Secction -->
 
-  <div class="  nav-mob" id="navmob">
-    <a href="#">HOW WE WORK</a>
-    <a href="#">BLOG</a>
-    <a href="#">ACCOUNT</a>
-    <div class="button mt-10">
-      VIEW PLANS
+  <div id="mnv">
+
+    <div class="nav-mob" id="nav-mob">
+          <a href="#">HOW WE WORK</a>
+          <a href="#">BLOG</a>
+          <a href="#">ACCOUNT</a>
+          <div class="button mt-10">
+            VIEW PLANS
+          </div>
     </div>
-  <div class="nav"></div>
-    </div>
+  </div>
+
+  <div class="nav">
+    <div class="container">
       <div class="navigasi">
       <div class="brand-nav">
         <img src="images/logo.svg" alt="">
       </div>
-      <div class="navbar  " id="navbar">
+      <div class="navbar" id="navbar">
         <a href="#">HOW WE WORK</a>
         <a href="#">BLOG</a>
         <a href="#">ACCOUNT</a>
@@ -34,20 +37,19 @@
         </div>
       </div>
     </div>
+    </div>
   </div>
 
   <!-- Body Secction -->
-
   <div class="background"></div>
   <div class="kanan" id="kanan"><img src="images/bg-pattern-intro-right-desktop.svg" alt=""></div>
   <div class="kiri" id="kiri"><img src="images/bg-pattern-intro-left-desktop.svg" alt=""></div>
-
   <div class="container">
-
     <!-- Jumbotrone -->
       <div class="jumbo-trone">
         <div class="typo">
           <div class="line">
+
             <hr>
           </div>
           <div class="hight">
@@ -66,7 +68,6 @@
           <img src="images/image-intro-desktop.jpg" alt="">
         </div>
       </div>
-
       <!-- Differents -->
       <div class="list">
         <hr>
@@ -82,7 +83,6 @@
               stuck filling in tedious forms.
             </div>
           </div>
-
           <div class="promosi">
             <div class="icon"><img src="images/icon-affordable-prices.svg" alt=""></div>
             <div class="title"> Affordable Prices</div>
@@ -90,7 +90,6 @@
               but we still offer the best coverage possible.
             </div>
           </div>
-
           <div class="promosi">
             <div class="icon"><img src="images/icon-people-first.svg" alt=""></div>
             <div class="title">People First</div>
@@ -98,27 +97,20 @@
               sure you’re covered when you need it.
             </div>
           </div>
-
         </div>
       </div>
-
       <!-- Benner -->
       <div class="bener">
         <div class="isi-bener">Find out more <br> about how we work</div>
         <div class="pencet">
-
           <div class="button">HOW WE WORK</div>
         </div>
       </div>
   </div>
-
   <!-- footer -->
   <div class="footer">
     <div class="background-footer"></div>
-
     <div class="container">
-
-
       <div class="head-line">
         <div class="brand"><img src="images/logo.svg" alt=""></div>
         <div class="icon">
@@ -126,12 +118,10 @@
           <img src="images/icon-twitter.svg" alt="">
           <img src="images/icon-pinterest.svg" alt="">
           <img src="images/icon-instagram.svg" alt="">
-
         </div>
   
       </div>
       <hr>
-
       <div class="isi-f">
         <div class="our">
           <div class="judul">Our company</div>
@@ -140,7 +130,6 @@
           <a href="#">View plans</a>
           <a href="#">Reviews</a>
         </div>
-
         <div class="our">
           <div class="judul">Help me</div>
           <a href="#">FAQ</a>
@@ -148,55 +137,80 @@
           <a href="#">Privacy policy</a>
           <a href="#">Cookies</a>
         </div>
-
         <div class="our">
           <div class="judul">Contact</div>
           <a href="#">Sales</a>
           <a href="#">Support</a>
           <a href="#">Live chat</a>
         </div>
-
         <div class="our">
           <div class="judul">Others</div>
           <a href="#">Careers</a>
           <a href="#">Press</a>
           <a href="#">Licenses</a>
         </div>
-
         <div class="our">
         </div>
       </div>
-
     </div>
   </div>
-
   <!-- js -->
-
   <script>
     function myFunction(x) {
   if (x.matches) { // If media query matches
     // document.body.style.backgroundColor = "yellow";
     document.getElementById('gambar').innerHTML ="<img src='images/image-intro-desktop.jpg'>";
-
     document.getElementById('kanan').innerHTML ="<img src='images/bg-pattern-intro-right-mobile.svg'>";
 
     document.getElementById('kiri').innerHTML ="<img src='images/bg-pattern-intro-left-mobile.svg'>";
-   
-    document.getElementById('navbar').style.display="hide";
 
-    document.getElementById('nav-mob').style.display="block";
+    document.getElementById('navbar').innerHTML =`
+    <label class="switch">
+                <input type="checkbox" id="switch" value="ONN" onclick="javascript:toggle(this);" >
+                <span class="slider round"></span>
+            </label> 
+    `;
+    // document.body.style.backgroundColor = "red";
    } 
-  //else {
-  //   document.body.style.backgroundColor = "pink";
-  // }
+  else {
+    document.getElementById('navbar').innerHTML =`
+    <div class="navbar" id="navbar">
+        <a href="#">HOW WE WORK</a>
+        <a href="#">BLOG</a>
+        <a href="#">ACCOUNT</a>
+        <div class="button mt-10">
+          VIEW PLANS
+        </div>
+      </div>
+    
+    `;
+  }
 }
-
 var x = window.matchMedia("(max-width: 700px)")
 myFunction(x) // Call listener function at run time
 x.addListener(myFunction) // Attach listener function on state changes 
 
+var z = document.getElementById('gambar');
 var z = document.getElementById('navbar');
     console.log(z);
+
+    let yx = document.getElementById("switch").value;
+        console.log(yx);
+
+        function toggle(checkbox) {
+    switch (checkbox.value) {
+        case "ONN":
+        document.getElementById('mnv').style.display="block";
+            document.body.style.backgroundColor = "#fafafa";
+            checkbox.value = "OFF";
+            break;
+        case "OFF":
+            checkbox.value = "ONN";
+            document.getElementById('mnv').style.display="none";
+            document.body.style.backgroundColor = "yellow";
+            break;
+    }
+  }
   </script>
 
 </body>
